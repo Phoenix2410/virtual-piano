@@ -30,3 +30,18 @@ btnContainer.addEventListener("click", function(e) {
   }
 
 });
+
+/*---FULLSCREEN---*/
+
+buttonfullScreen.addEventListener('click', function() {
+   console.log(document.fullscreenEnabled);
+   console.log(document.fullscreenElement);
+   if (document.fullscreenElement === null) {
+      document.documentElement.requestFullscreen();
+   } else {
+      if (document.fullscreenEnabled) {
+         document.exitFullscreen();
+      }
+   }
+});
+   
